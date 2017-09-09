@@ -1,0 +1,17 @@
+AC_INIT(ui.cc)
+AM_INIT_AUTOMAKE(libui, 0.0.1)
+
+AC_PROG_CC
+AC_PROG_CXX
+AM_PROG_LIBTOOL
+
+AC_CHECK_LIB(ncurses, initscr)
+
+AC_HEADER_STDC
+AC_CHECK_HEADERS(fcntl.h sys/ioctl.h unistd.h ncurses.h)
+
+AC_PROG_GCC_TRADITIONAL
+AC_TYPE_SIGNAL
+AC_CHECK_FUNCS(select strdup)
+
+AC_OUTPUT(Makefile)
